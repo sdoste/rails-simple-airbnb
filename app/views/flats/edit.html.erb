@@ -1,0 +1,27 @@
+<div class="edit-container">
+  <div class="edit-card">
+    <div class="edit-title">
+      <h1 class="edit-title">Edit Flat</h1>
+    </div>
+    <%= form_for (@flat) do |f| %>
+      <p class="form-field">Name</p>
+      <%= f.text_field :name %>
+      <p class="form-field">Address</p>
+      <%= f.text_field :address %>
+      <p class="form-field">Picture Url</p>
+      <%= f.text_field :picture_url %>
+      <p class="form-field">Description</p>
+      <%= f.text_area :description %>
+      <p class="form-field">Number of guests</p>
+      <%= f.number_field :number_of_guests %>
+      <p class="form-field">Price per night</p>
+      <%= f.number_field :price_per_night %>
+      <br>
+      <div class="edit-buttons">
+      <%= f.submit "Update Flat", class: 'btn btn-primary' %>
+      <%= link_to 'Cancel', flats_path, class: 'btn btn-danger' %>
+      </div>
+      <br>
+    <% end %>
+  </div>
+</div>

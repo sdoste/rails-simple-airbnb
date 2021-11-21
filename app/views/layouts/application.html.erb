@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
+ <head>
     <title>RailsSimpleAirbnb</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true%>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/3e158f92ac.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   </head>
 
   <body>
+    <nav class="navbar navbar-light" style="background-color: #F8F8F8;">
+      <p class="navar-1"><%= link_to 'Simple Airbnb', flats_path %></p>
+      <p class="navar-2 btn btn-outline-primary"><%= link_to 'Add Flat', new_flat_path %></p>
+    </nav>
     <%= yield %>
   </body>
 </html>

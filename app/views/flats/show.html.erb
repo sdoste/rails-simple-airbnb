@@ -1,0 +1,34 @@
+<div class="show-container">
+  <div class="show-image" style="background-image: url(<%= @flat.picture_url %>);"></div>
+  <div class="show-content">
+    <div class="show-column1">
+      <div class="show-card show-title-and-address">
+        <h1 class="show-flat-title"><%= @flat.name %></h1>
+        <p class="show-flat-address"><%= @flat.address %></p>
+      </div>
+      <div class="show-card show-description">
+        <h3 class="show-description-title">A bit more about this flat...</h3>
+        <p class="show-description"><%= @flat.description %></p>
+      </div>
+    </div>
+    <div class="show-column2">
+      <div class="show-card show-book">
+        <h5 class="book-title">Book this place!</h5>
+      </div>
+      <div class="show-card show-details">
+        <h3 class="show-details-title">Details</h3>
+        <%= @flat.number_of_guests %> <i class="fas fa-user-friends"></i>
+        <%= @flat.price_per_night %> <i class="fas fa-euro-sign"></i>
+      </div>
+      <div class="show-card show-socials">
+        <p class="show-share">Share</p>
+        <div class="show-socials-icons">
+        <i class="fab fa-facebook-square fa-2x"></i>
+        <i class="fab fa-twitter-square fa-2x"></i>
+        <i class="fab fa-pinterest-square fa-2x"></i>
+        <i class="fas fa-envelope-square fa-2x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

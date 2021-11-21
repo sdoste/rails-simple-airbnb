@@ -1,0 +1,27 @@
+<div class="index-container">
+  <div class="index-title">
+    <h1 class="title">All our flats (<%=@flats.length %>)</h1>
+  </div>
+  <div class="cards">
+    <% @flats.each do |flat| %>
+      <div class="card">
+        <img class="card-img-top" src= <%= flat.picture_url %>>
+        <div class="card-header">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text"><%= flat.address %></p>
+          <div class="card-details">
+            <%= flat.number_of_guests %> <i class="fas fa-user-friends fa-sm"></i>
+            <%= flat.price_per_night %> <i class="fas fa-euro-sign fa-sm"></i>
+          </div>
+        </div>
+          <div class="card-body">
+            <%= link_to 'More info', flat_path(flat), class: "card-link-info" %>
+            <%= link_to 'Edit', edit_flat_path(flat), class: "card-link-edit" %>
+            <%= link_to 'Remove', flat_path(flat),
+              method: :delete, data: { confirm: "Are you sure you want to delete this flat?" },
+              class: "card-link-remove" %>
+          </div>
+      </div>
+    <% end %>
+  </div>
+</div>
